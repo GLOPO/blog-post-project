@@ -2,8 +2,12 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
+use App\Models\Post; 
+use App\Models\User; 
+
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;  // For slug generation if needed
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,13 +16,30 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com'
+        ]);
+        $categories = [
+            'Technology',
+            'Health',
+            'Science',
+            'Sports',
+            'Politics',
+            'Entertainment',
+        ];
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        foreach ($categories as $category) {
+            Category::firstOrCreate(
+                ['slug' => Str::slug($category)],
+                ['name' => $category]
+            );
+        }
+
+        Post::factory(100)->create();
+        
+          
     }
 }

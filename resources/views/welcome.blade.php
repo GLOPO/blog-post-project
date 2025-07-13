@@ -17,6 +17,7 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
+                <x-blog-card title="Blog Post from Dera" body="This is my custom laravel component"/>
             }
         </style>
     </head>

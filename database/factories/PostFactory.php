@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 namespace Database\Factories;
@@ -33,3 +34,14 @@ class PostFactory extends Factory
         ];
     }
 }
+=======
+use Illuminate\Support\Str;
+
+public function definition(): array
+{
+    return [
+        'title' => $this->faker->sentence,
+        'body' => $this->faker->paragraphs(3, true),
+        ];
+}
+>>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6

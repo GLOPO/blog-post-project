@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\postController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+=======
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('hello');
+});
+>>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6

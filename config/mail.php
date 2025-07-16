@@ -41,10 +41,6 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-<<<<<<< HEAD
-=======
-            'url' => env('MAIL_URL'),
->>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
@@ -58,28 +54,12 @@ return [
             'transport' => 'ses',
         ],
 
-<<<<<<< HEAD
         'mailgun' => [
             'transport' => 'mailgun',
         ],
 
         'postmark' => [
             'transport' => 'postmark',
-=======
-        'postmark' => [
-            'transport' => 'postmark',
-            // 'message_stream_id' => null,
-            // 'client' => [
-            //     'timeout' => 5,
-            // ],
-        ],
-
-        'mailgun' => [
-            'transport' => 'mailgun',
-            // 'client' => [
-            //     'timeout' => 5,
-            // ],
->>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6
         ],
 
         'sendmail' => [
@@ -103,17 +83,6 @@ return [
                 'log',
             ],
         ],
-<<<<<<< HEAD
-=======
-
-        'roundrobin' => [
-            'transport' => 'roundrobin',
-            'mailers' => [
-                'ses',
-                'postmark',
-            ],
-        ],
->>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6
     ],
 
     /*

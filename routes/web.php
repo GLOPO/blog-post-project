@@ -1,9 +1,15 @@
 <?php
 
-<<<<<<< HEAD
 use App\Http\Controllers\postController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+// use Illuminate\Support\Facades\Route;
+
+Route::get('/php-version', function () {
+    return phpversion();
+});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +27,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [postController::class, 'index'])
-->middleware(['auth', 'verified'])->name('dashboard');
+->middleware(['auth'
+// , 'verified'
+])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -30,10 +38,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-=======
-use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('hello');
-});
->>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6

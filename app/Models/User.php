@@ -3,21 +3,16 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-<<<<<<< HEAD
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-=======
->>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-<<<<<<< HEAD
-class User extends Authenticatable implements MustVerifyEmail
-=======
-class User extends Authenticatable
->>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6
+// Due to errors in implemnting email verifications, it would be paused for now 
+class User extends Authenticatable 
+// implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -49,9 +44,5 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-<<<<<<< HEAD
-=======
-        'password' => 'hashed',
->>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6
     ];
 }

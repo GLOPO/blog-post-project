@@ -9,7 +9,7 @@ class BlogCard extends Component
     public $title;
     public $body;
 
-    public function --construct($title, $body)
+    public function __construct($title, $body)
     {
         $this->title = $title;
         $this->body = $body;
@@ -17,6 +17,6 @@ class BlogCard extends Component
 
     public function render ()
     {
-        return view('components.blog-card')
+        return view('components.blog-card');
     }
 }

@@ -100,11 +100,7 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-<<<<<<< HEAD
             'table' => 'password_resets',
-=======
-            'table' => 'password_reset_tokens',
->>>>>>> b3246b188fcf6efceccbcf2e10fbce7b4a245fc6
             'expire' => 60,
             'throttle' => 60,
         ],
